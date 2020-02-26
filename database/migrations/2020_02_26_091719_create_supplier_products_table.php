@@ -21,6 +21,9 @@ class CreateSupplierProductsTable extends Migration
             $table->timestamp('updated_at');
             $table->timestamp('deleted_at');
             $table->timestamps();
+
+            $table->foreign('supply_id')->references('id')->on('suppliers');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

@@ -21,6 +21,9 @@ class CreateOrderDetailsTable extends Migration
             $table->timestamp('updated_at');
             $table->timestamp('deleted_at');
             $table->timestamps();
+
+            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
