@@ -8,4 +8,5 @@ class SupplierProduct extends Model
 {
     //
     protected $table = "supplier_products";
+    protected $fillable = ['supply_id', 'product_id'];
 }
