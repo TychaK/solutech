@@ -15,11 +15,14 @@ class CreateSupplierProductsTable extends Migration
     {
         Schema::create('supplier_products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('supply_id');
-            $table->integer('product_id');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
-            $table->timestamp('deleted_at');
+            $table->bigInteger('supply_id')->unsigned();
+            $table->bigInteger('product_id')->unsigned();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('deleted_at')->useCurrent();
+        });
+
+        Schema::table('supplier_products', function (Blueprint $table) {
             $table->foreign('supply_id')->references('id')->on('suppliers');
             $table->foreign('product_id')->references('id')->on('products');
         });
