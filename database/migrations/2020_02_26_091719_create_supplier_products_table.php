@@ -15,6 +15,11 @@ class CreateSupplierProductsTable extends Migration
     {
         Schema::create('supplier_products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('supply_id');
+            $table->integer('product_id');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }
