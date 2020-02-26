@@ -21,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->string('created_at', 45);
             $table->string('updated_at', 45);
             $table->timestamp('deleted_at');
-            $table->timestamps();
         });
     }
 
