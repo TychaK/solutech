@@ -36,5 +36,10 @@ or if registered, go to http://localhost:8000/login
 
 - After you create an account or login, you'll be able to copy your Bearer Authorization Key which you can use to interact with the API.
 
+##Screenshots
+
+![Alt text](/public/img/logo.jpeg?raw=true "Login")
+
 ##Thanks
+
 Thank you for checking out this API. :-)
