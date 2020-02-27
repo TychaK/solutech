@@ -18,12 +18,12 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active menu-toggle">
+                <li class="menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
-                        <li class="active">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
                         <li>
@@ -50,7 +50,7 @@
                         Products
                     </a>
                     <ul class="collapse list-unstyled" id="productSubmenu">
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/products">Get Products</a>
                         </li>
                         <li>
@@ -107,7 +107,7 @@
                         <li>
                             <a href="/dashboard/order_details">Get Orders Details</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="/dashboard/order_details/create">Create Order Detail</a>
                         </li>
                         <li>
@@ -125,16 +125,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-toggle">
+                <li class="menu-toggle active">
                     <a href="#supplierProductSubmenu" data-toggle="collapse" aria-expanded="false"
                        class="dropdown-toggle collapsed">
                         Supplier Products
                     </a>
-                    <ul class="collapse list-unstyled" id="supplierProductSubmenu">
-                        <li>
+                    <ul class="collapse list-unstyled show" id="supplierProductSubmenu">
+                        <li class="active">
                             <a href="/dashboard/supplier_products">Get Supplier Products</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="/dashboard/supplier_products/create">Create Supplier Product</a>
                         </li>
                         <li>
@@ -170,7 +170,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <api-dashboard access-token="{{Session::get('accessToken')}}"></api-dashboard>
+            <supplier-product-dashboard access-token="{{Session::get('accessToken')}}"></supplier-product-dashboard>
         </div>
     </div>
 </div>
@@ -197,3 +197,10 @@
 </script>
 </body>
 </html>
+<script>
+    import SupplierProductDashboard from "../../js/components/api/SupplierProductDashboard";
+
+    export default {
+        components: {SupplierProductDashboard}
+    }
+</script>

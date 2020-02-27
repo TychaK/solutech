@@ -18,12 +18,12 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active menu-toggle">
+                <li class="menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
-                        <li class="active">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
                         <li>
@@ -49,7 +49,7 @@
                        class="dropdown-toggle collapsed">
                         Products
                     </a>
-                    <ul class="collapse list-unstyled" id="productSubmenu">
+                    <ul class="collapse list-unstyled show" id="productSubmenu">
                         <li>
                             <a href="/dashboard/products">Get Products</a>
                         </li>
@@ -71,16 +71,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-toggle">
+                <li class="menu-toggle active">
                     <a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false"
                        class="dropdown-toggle collapsed">
                         Suppliers
                     </a>
-                    <ul class="collapse list-unstyled" id="supplierSubmenu">
+                    <ul class="collapse list-unstyled show" id="supplierSubmenu">
                         <li>
                             <a href="/dashboard/suppliers">Get Suppliers</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/suppliers/create">Create Supplier</a>
                         </li>
                         <li>
@@ -160,6 +160,7 @@
                     <button class="btn btn-primary mt-1" onclick="copyAPIKey()">Copy Key</button>
                 </li>
             </ul>
+
         </div>
     </nav>
 
@@ -170,7 +171,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <api-dashboard access-token="{{Session::get('accessToken')}}"></api-dashboard>
+            <create-supplier token="{{Session::get('accessToken')}}"></create-supplier>
         </div>
     </div>
 </div>
@@ -178,8 +179,16 @@
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/popper.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+{{--<script src="{{asset('js/main.js')}}"></script>--}}
 <script>
+    $(document).ready(function () {
+        $('.menu-toggle').on('click', function () {
+            $('.menu-toggle').removeClass('active');
+            $(this).addClass('active');
+            $('.collapse').removeClass('show');
+        });
+    });
+
     function copyAPIKey() {
         /* Get the text field */
         var copyText = document.getElementById("api_key");

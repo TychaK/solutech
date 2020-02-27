@@ -18,18 +18,18 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active menu-toggle">
+                <li class="menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
-                        <li class="active">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
                         <li>
                             <a href="/dashboard/orders/create">Create Order</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/orders/update">Update Order</a>
                         </li>
                         <li>
@@ -71,12 +71,12 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-toggle">
+                <li class="menu-toggle active">
                     <a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false"
                        class="dropdown-toggle collapsed">
                         Suppliers
                     </a>
-                    <ul class="collapse list-unstyled" id="supplierSubmenu">
+                    <ul class="collapse list-unstyled show" id="supplierSubmenu">
                         <li>
                             <a href="/dashboard/suppliers">Get Suppliers</a>
                         </li>
@@ -86,7 +86,7 @@
                         <li>
                             <a href="/dashboard/suppliers/update">Update Supplier</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/suppliers/remove">Delete Supplier</a>
                         </li>
                         <li>
@@ -170,7 +170,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <api-dashboard access-token="{{Session::get('accessToken')}}"></api-dashboard>
+            <remove-supplier token="{{Session::get('accessToken')}}"></remove-supplier>
         </div>
     </div>
 </div>

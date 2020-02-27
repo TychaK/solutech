@@ -18,7 +18,7 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active">
+                <li class="active menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
@@ -44,29 +44,113 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                       class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li class="menu-toggle">
+                    <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false"
+                       class="dropdown-toggle collapsed">
+                        Products
+                    </a>
+                    <ul class="collapse list-unstyled" id="productSubmenu">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="/dashboard/products">Get Products</a>
                         </li>
                         <li>
-                            <a href="#">Page 2</a>
+                            <a href="/dashboard/products/create">Create Product</a>
                         </li>
                         <li>
-                            <a href="#">Page 3</a>
+                            <a href="/dashboard/products/update">Update Product</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/products/remove">Delete Product</a>
+                        </li>
+                        <li>
+                            <router-link
+                                to="/about"
+                                v-slot="{ href, route, navigate, isActive, isExactActive }">
+
+                            </router-link>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Portfolio</a>
+                <li class="menu-toggle">
+                    <a href="#supplierSubmenu" data-toggle="collapse" aria-expanded="false"
+                       class="dropdown-toggle collapsed">
+                        Suppliers
+                    </a>
+                    <ul class="collapse list-unstyled" id="supplierSubmenu">
+                        <li>
+                            <a href="/dashboard/suppliers">Get Suppliers</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/suppliers/create">Create Supplier</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/suppliers/update">Update Supplier</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/suppliers/remove">Delete Supplier</a>
+                        </li>
+                        <li>
+                            <router-link
+                                to="/about"
+                                v-slot="{ href, route, navigate, isActive, isExactActive }">
+
+                            </router-link>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li class="menu-toggle">
+                    <a href="#orderDetailSubmenu" data-toggle="collapse" aria-expanded="false"
+                       class="dropdown-toggle collapsed">
+                        Order Details
+                    </a>
+                    <ul class="collapse list-unstyled" id="orderDetailSubmenu">
+                        <li>
+                            <a href="/dashboard/order_details">Get Orders Details</a>
+                        </li>
+                        <li class="active">
+                            <a href="/dashboard/order_details/create">Create Order Detail</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/order_details/update">Update Order Detail</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/order_details/remove">Delete Order Detail</a>
+                        </li>
+                        <li>
+                            <router-link
+                                to="/about"
+                                v-slot="{ href, route, navigate, isActive, isExactActive }">
+
+                            </router-link>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-toggle">
+                    <a href="#supplierProductSubmenu" data-toggle="collapse" aria-expanded="false"
+                       class="dropdown-toggle collapsed">
+                        Supplier Products
+                    </a>
+                    <ul class="collapse list-unstyled" id="supplierProductSubmenu">
+                        <li>
+                            <a href="/dashboard/supplier_products">Get Supplier Products</a>
+                        </li>
+                        <li class="active">
+                            <a href="/dashboard/supplier_products/create">Create Supplier Product</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/supplier_products/update">Update Supplier Product</a>
+                        </li>
+                        <li>
+                            <a href="/dashboard/supplier_products/remove">Delete Supplier Product</a>
+                        </li>
+                        <li>
+                            <router-link
+                                to="/about"
+                                v-slot="{ href, route, navigate, isActive, isExactActive }">
+
+                            </router-link>
+                        </li>
+                    </ul>
                 </li>
                 <hr>
                 API KEY
@@ -76,7 +160,6 @@
                     <button class="btn btn-primary mt-1" onclick="copyAPIKey()">Copy Key</button>
                 </li>
             </ul>
-
         </div>
     </nav>
 

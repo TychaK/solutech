@@ -18,12 +18,12 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active menu-toggle">
+                <li class="menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
-                        <li class="active">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
                         <li>
@@ -44,13 +44,13 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-toggle">
+                <li class="active menu-toggle">
                     <a href="#productSubmenu" data-toggle="collapse" aria-expanded="false"
                        class="dropdown-toggle collapsed">
                         Products
                     </a>
-                    <ul class="collapse list-unstyled" id="productSubmenu">
-                        <li>
+                    <ul class="collapse list-unstyled show" id="productSubmenu">
+                        <li class="active">
                             <a href="/dashboard/products">Get Products</a>
                         </li>
                         <li>
@@ -170,7 +170,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <api-dashboard access-token="{{Session::get('accessToken')}}"></api-dashboard>
+            <product-dashboard access-token="{{Session::get('accessToken')}}"></product-dashboard>
         </div>
     </div>
 </div>

@@ -18,12 +18,12 @@
                style="background-image: url({{asset('img/logo.jpeg')}});">
             </a>
             <ul class="list-unstyled components mb-5">
-                <li class="active menu-toggle">
+                <li class="menu-toggle">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
-                        <li class="active">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
                         <li>
@@ -53,7 +53,7 @@
                         <li>
                             <a href="/dashboard/products">Get Products</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/products/create">Create Product</a>
                         </li>
                         <li>
@@ -107,7 +107,7 @@
                         <li>
                             <a href="/dashboard/order_details">Get Orders Details</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="/dashboard/order_details/create">Create Order Detail</a>
                         </li>
                         <li>
@@ -125,22 +125,22 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-toggle">
+                <li class="menu-toggle active">
                     <a href="#supplierProductSubmenu" data-toggle="collapse" aria-expanded="false"
                        class="dropdown-toggle collapsed">
                         Supplier Products
                     </a>
-                    <ul class="collapse list-unstyled" id="supplierProductSubmenu">
+                    <ul class="collapse list-unstyled show" id="supplierProductSubmenu">
                         <li>
                             <a href="/dashboard/supplier_products">Get Supplier Products</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="/dashboard/supplier_products/create">Create Supplier Product</a>
                         </li>
                         <li>
                             <a href="/dashboard/supplier_products/update">Update Supplier Product</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/dashboard/supplier_products/remove">Delete Supplier Product</a>
                         </li>
                         <li>
@@ -160,6 +160,7 @@
                     <button class="btn btn-primary mt-1" onclick="copyAPIKey()">Copy Key</button>
                 </li>
             </ul>
+
         </div>
     </nav>
 
@@ -170,7 +171,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <api-dashboard access-token="{{Session::get('accessToken')}}"></api-dashboard>
+            <remove-supplier-product token="{{Session::get('accessToken')}}"></remove-supplier-product>
         </div>
     </div>
 </div>
@@ -178,8 +179,16 @@
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/popper.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+{{--<script src="{{asset('js/main.js')}}"></script>--}}
 <script>
+    $(document).ready(function () {
+        $('.menu-toggle').on('click', function () {
+            $('.menu-toggle').removeClass('active');
+            $(this).addClass('active');
+            $('.collapse').removeClass('show');
+        });
+    });
+
     function copyAPIKey() {
         /* Get the text field */
         var copyText = document.getElementById("api_key");
