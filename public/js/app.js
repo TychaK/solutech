@@ -22660,7 +22660,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/orders")
+        _vm._v("/api/orders")
       ])
     ])
   }
@@ -22801,7 +22801,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/order_details")
+        _vm._v("/api/order_details")
       ])
     ])
   }
@@ -22971,7 +22971,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/products")
+        _vm._v("/api/products")
       ])
     ])
   }
@@ -23083,7 +23083,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/suppliers")
+        _vm._v("/api/suppliers")
       ])
     ])
   }
@@ -23224,7 +23224,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/supplier_products")
+        _vm._v("/api/supplier_products")
       ])
     ])
   }
@@ -23288,7 +23288,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("get")]),
-        _vm._v("/orders")
+        _vm._v("/api/orders")
       ])
     ])
   },
@@ -23420,7 +23420,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("DELETE")]),
-        _vm._v("/suppliers/{id}")
+        _vm._v("/api/suppliers/{id}")
       ])
     ])
   }
@@ -23502,7 +23502,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("get")]),
-        _vm._v("/order_details")
+        _vm._v("/api/order_details")
       ])
     ])
   },
@@ -23596,7 +23596,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("get")]),
-        _vm._v("/products")
+        _vm._v("/api/products")
       ])
     ])
   },
@@ -23730,7 +23730,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("DELETE")]),
-        _vm._v("/orders/{order_id}")
+        _vm._v("/api/orders/{order_id}")
       ])
     ])
   }
@@ -23842,7 +23842,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("DELETE")]),
-        _vm._v("/orders/{id}")
+        _vm._v("/api/orders/{id}")
       ])
     ])
   }
@@ -23954,7 +23954,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("DELETE")]),
-        _vm._v("/orders/{id}")
+        _vm._v("/api/orders/{id}")
       ])
     ])
   }
@@ -24066,7 +24066,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("DELETE")]),
-        _vm._v("/supplier_products")
+        _vm._v("/api/supplier_products")
       ])
     ])
   }
@@ -24136,7 +24136,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("get")]),
-        _vm._v("/products")
+        _vm._v("/api/products")
       ])
     ])
   },
@@ -24236,7 +24236,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("get")]),
-        _vm._v("/supplier_products")
+        _vm._v("/api/supplier_products")
       ])
     ])
   },
@@ -24395,7 +24395,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("PUT")]),
-        _vm._v("/orders/{order_id}")
+        _vm._v("/api/orders/{order_id}")
       ])
     ])
   }
@@ -24569,7 +24569,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("PUT")]),
-        _vm._v("/order_details/{id}")
+        _vm._v("/api/order_details/{id}")
       ])
     ])
   }
@@ -24768,7 +24768,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("PUT")]),
-        _vm._v("/products")
+        _vm._v("/api/products")
       ])
     ])
   }
@@ -24911,7 +24911,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("PUT")]),
-        _vm._v("/suppliers/{id}")
+        _vm._v("/api/suppliers/{id}")
       ])
     ])
   }
@@ -25081,7 +25081,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "small text-warning" }, [
         _c("span", { staticClass: "badge-pill bg-dark" }, [_vm._v("POST")]),
-        _vm._v("/supplier_products")
+        _vm._v("/api/supplier_products")
       ])
     ])
   }
