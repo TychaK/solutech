@@ -40,6 +40,8 @@ or if registered, go to http://localhost:8000/login
 
 ![Alt text](/public/img/logo.jpeg?raw=true "Login")
 
+
+
 ##Thanks
 
 Thank you for checking out this API. :-)

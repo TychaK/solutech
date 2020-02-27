@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b9f42d-8abc-45f7-9bff-9dc860fa8f46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-06-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-06-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-06-28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-06-41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-06-48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-07-07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-07-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-07-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-14-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-14-27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-14-34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-14-39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-14-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-15-00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-15-04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/screenshots/Screenshot from 2020-02-28 01-15-19.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateOrderDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateOrderDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateProduct.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateSupplier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplier.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateSupplierProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplierProduct.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/DeleteSupplier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/DeleteSupplier.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/OrderDetailDashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/OrderDetailDashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/ProductDashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/ProductDashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/RemoveOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/RemoveOrderDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveOrderDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/RemoveProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveProduct.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/RemoveSupplierProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveSupplierProduct.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/SupplierDashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/SupplierDashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/SupplierProductDashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/SupplierProductDashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/UpdateOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/UpdateOrderDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateOrderDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/UpdateProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateProduct.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplier.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplierProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplierProduct.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +182,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img/screenshots" />
       <recent name="$PROJECT_DIR$/resources/js/components/api" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/public/img" />
@@ -229,7 +227,7 @@
       <workItem from="1582726102393" duration="11188000" />
       <workItem from="1582739585523" duration="5707000" />
       <workItem from="1582746993585" duration="15291000" />
-      <workItem from="1582796690558" duration="37318000" />
+      <workItem from="1582796690558" duration="37620000" />
     </task>
     <task id="LOCAL-00001" summary="Added Project Authentication controller">
       <created>1582806032873</created>
@@ -406,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582841040044</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated correct endpoint on the docs onto the Vue Components.">
+      <created>1582841591322</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1582841591322</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added Frontend Screenshots">
+      <created>1582841893543</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1582841893543</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +426,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Modified migrations to cascade on delete for tables order_details &amp; supplier_products." />
     <MESSAGE value="Modified OrdersTableSeeder.php faker randomNumber to 5 numbers" />
     <MESSAGE value="Added bootstrap template &amp; Project Logo" />
     <MESSAGE value="Added Vue Components to consume the API" />
@@ -439,7 +450,8 @@
     <MESSAGE value="Added an OrderTest.php to test inserting order." />
     <MESSAGE value="Screenshots to README.md" />
     <MESSAGE value="Updated correct endpoint on the docs onto the Vue Components." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated correct endpoint on the docs onto the Vue Components." />
+    <MESSAGE value="Added Frontend Screenshots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Frontend Screenshots" />
   </component>
   <component name="WindowStateProjectService">
     <state x="297" y="55" width="824" height="691" key="#CLI_Interpreters" timestamp="1582835256330">
@@ -458,10 +470,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1582752609644" />
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582841590311">
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582841893007">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582841590311" />
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582841893007" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1582747055639">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -494,9 +506,9 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1582820178194" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582841810110">
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582841937964">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582841810110" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582841937964" />
   </component>
 </project>
