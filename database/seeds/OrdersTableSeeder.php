@@ -15,7 +15,7 @@ class OrdersTableSeeder extends Seeder
         $faker = \Faker\Factory::create();
         for ($i = 0; $i < 10; $i++) {
             \App\Order::create([
-                'order_number' => $faker->randomNumber(10)
+                'order_number' => $faker->randomNumber(5)
             ]);
         }
     }
