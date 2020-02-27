@@ -7,7 +7,6 @@
     <title>Laravel</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
     <!-- Styles -->
     <style>
         html, body {
@@ -62,11 +61,12 @@
         }
     </style>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 <div id="app">
-    <div class="container">
-    </div>
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
@@ -84,17 +84,12 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Solutech
+                Welcome
             </div>
             <div class="links">
-                <a href="https://laravel.com/docs">Login</a>
-                <a href="https://laracasts.com">Register</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://blog.laravel.com">Blog</a>
-                <a href="https://nova.laravel.com">Nova</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://vapor.laravel.com">Vapor</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <a href="https://github.com/TychaK/solutech">GitHub</a>
             </div>
         </div>
     </div>
