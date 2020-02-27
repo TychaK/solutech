@@ -36,6 +36,7 @@
 </template>
 <script>
     export default {
+        props: ['token'],
         data: function () {
             return {
                 products: []

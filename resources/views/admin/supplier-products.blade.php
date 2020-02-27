@@ -197,10 +197,3 @@
 </script>
 </body>
 </html>
-<script>
-    import SupplierProductDashboard from "../../js/components/api/SupplierProductDashboard";
-
-    export default {
-        components: {SupplierProductDashboard}
-    }
-</script>
