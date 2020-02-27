@@ -170,7 +170,7 @@
             <span class="sr-only">Toggle Menu</span>
         </button>
         <div id="app">
-            <supplier-dashboard access-token="{{Session::get('accessToken')}}"></supplier-dashboard>
+            <supplier-dashboard token="{{Session::get('accessToken')}}"></supplier-dashboard>
         </div>
     </div>
 </div>
