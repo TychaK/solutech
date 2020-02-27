@@ -26,16 +26,16 @@ class SupplierProductController extends Controller
         return response()->json($order_detail, 201);
     }
 
-    public function update(Request $request, $supply_id, $product_id)
+    public function update(Request $request, $id)
     {
-        $order_detail = SupplierProduct::firstOrFail()->where('supply_id', $supply_id)->where('product_id', $product_id);
+        $order_detail = SupplierProduct::firstOrFail()->where('id', $id);
         $order_detail->update($request->all());
         return response()->json($order_detail, 200);
     }
 
-    public function delete($supply_id, $product_id)
+    public function delete($id)
     {
-        $order_detail = SupplierProduct::firstOrFail()->where('supply_id', $supply_id)->where('product_id', $product_id);
+        $order_detail = SupplierProduct::firstOrFail()->where('id', $id);
         $order_detail->delete();
         return response()->json($order_detail, 204);
     }

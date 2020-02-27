@@ -28,14 +28,14 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        $product = Product::findOrFail()->where('id', $id);
+        $product = Product::firstOrFail()->where('id', $id);
         $product->update($request->all());
         return response()->json($product, 200);
     }
 
     public function delete($id)
     {
-        $product = Product::findOrFail()->where('id', $id);
+        $product = Product::firstOrFail()->where('id', $id);
         $product->delete();
         return response()->json($product, 204);
     }

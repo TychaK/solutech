@@ -27,14 +27,14 @@ class SupplierController extends Controller
 
     public function update(Request $request, $id)
     {
-        $Supplier = Supplier::findOrFail()->where('id', $id);
+        $Supplier = Supplier::firstOrFail()->where('id', $id);
         $Supplier->update($request->all());
         return response()->json($Supplier, 200);
     }
 
     public function delete($id)
     {
-        $Supplier = Supplier::findOrFail()->where('id', $id);
+        $Supplier = Supplier::firstOrFail()->where('id', $id);
         $Supplier->delete();
         return response()->json($Supplier, 204);
     }
