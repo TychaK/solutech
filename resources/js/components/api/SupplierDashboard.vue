@@ -49,8 +49,12 @@
         mounted() {
             axios.get(
                 'http://localhost:8000/api/suppliers',
-                '',
-                config
+                {
+                    headers: {
+                        "Accept": "application/json",
+                        "Authorization": `Bearer ` + this.token
+                    }
+                }
             ).then(response => {
                 this.suppliers = response.data;
             }).catch(err => {

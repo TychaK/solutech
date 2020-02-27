@@ -51,6 +51,12 @@
                     {
                         'order_number': this.order_number
                     },
+                    {
+                        headers: {
+                            "Accept": "application/json",
+                            "Authorization": `Bearer ` + this.token
+                        }
+                    }
                 )
                     .then(response => {
                         this.post_response = JSON.stringify(response, null, 2);

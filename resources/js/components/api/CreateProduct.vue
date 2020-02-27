@@ -29,7 +29,6 @@
     </div>
 </template>
 <script>
-
     export default {
         props: ['token'],
         data: function () {
@@ -55,6 +54,12 @@
                         'description': this.description,
                         'quantity': this.quantity
                     },
+                    {
+                        headers: {
+                            "Accept": "application/json",
+                            "Authorization": `Bearer ` + this.token
+                        }
+                    }
                 )
                     .then(response => {
                         this.post_response = JSON.stringify(response, null, 2);

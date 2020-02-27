@@ -52,6 +52,12 @@
                         'supply_id': this.supply_id,
                         'product_id': this.product_id,
                     },
+                    {
+                        headers: {
+                            "Accept": "application/json",
+                            "Authorization": `Bearer ` + this.token
+                        }
+                    }
                 )
                     .then(response => {
                         this.post_response = JSON.stringify(response, null, 2);

@@ -39,7 +39,13 @@
 
                 // order number present, do api call using axios :-)
                 axios.delete(
-                    "http://localhost:8000/api/supplier_products/" + this.id
+                    "http://localhost:8000/api/supplier_products/" + this.id,
+                    {
+                        headers: {
+                            "Accept": "application/json",
+                            "Authorization": `Bearer ` + this.token
+                        }
+                    }
                 )
                     .then(response => {
                         this.post_response = JSON.stringify(response, null, 2);

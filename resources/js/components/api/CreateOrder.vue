@@ -21,7 +21,6 @@
     </div>
 </template>
 <script>
-
     export default {
         props: ['token'],
         data: function () {
@@ -43,6 +42,12 @@
                     {
                         'order_number': this.order_number
                     },
+                    {
+                        headers: {
+                            "Accept": "application/json",
+                            "Authorization": `Bearer ` + this.token
+                        }
+                    }
                 )
                     .then(response => {
                         this.post_response = JSON.stringify(response, null, 2);
