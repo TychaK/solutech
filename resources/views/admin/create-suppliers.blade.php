@@ -49,7 +49,7 @@
                        class="dropdown-toggle collapsed">
                         Products
                     </a>
-                    <ul class="collapse list-unstyled show" id="productSubmenu">
+                    <ul class="collapse list-unstyled" id="productSubmenu">
                         <li>
                             <a href="/dashboard/products">Get Products</a>
                         </li>

@@ -22,7 +22,7 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         Orders
                     </a>
-                    <ul class="collapse list-unstyled show" id="homeSubmenu">
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="/dashboard/orders">Get Orders</a>
                         </li>
