@@ -2,7 +2,7 @@
     <div class="container">
         <h4 class="mb-4">
             <span class="text-info">Endpoint:</span>
-            <p class="small text-warning"><span class="badge-pill bg-dark">POST</span>/suppliers</p>
+            <p class="small text-warning"><span class="badge-pill bg-dark">POST</span>/api/suppliers</p>
         </h4>
         <div class="fa-border p-5">
             <form id="create-order-form" @submit="createOrder" method="POST" action="">

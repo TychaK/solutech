@@ -2,7 +2,7 @@
     <div class="container">
         <h4 class="mb-4">
             <span class="text-info">Endpoint:</span>
-            <p class="small text-warning"><span class="badge-pill bg-dark">get</span>/supplier_products</p>
+            <p class="small text-warning"><span class="badge-pill bg-dark">get</span>/api/supplier_products</p>
         </h4>
         <table class="table table-responsive col-md-12">
             <thead>
