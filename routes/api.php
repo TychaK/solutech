@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => ['auth:api']], function () {
+//Route::group(['middleware' => ['auth:api']], function () {
 
     // orders api routes
     Route::get('orders', 'OrderController@index');
@@ -55,10 +55,10 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::put('supplier_products/{supply_id}/{product_id}', 'SupplierProductController@store');
     Route::delete('supplier_products/{supply_id}/{product_id}', 'SupplierProductController@delete');
 
-});
+//});
 
 // account registration routes...
-Route::post('/register', 'Api\AuthController@register');
 
-// account login route
-Route::post('/login', 'Api\AuthController@login');
+Route::post('register', 'Api\AuthController@register');
+Route::post('login', 'Api\AuthController@login');
+
