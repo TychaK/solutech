@@ -23,8 +23,8 @@ class CreateSupplierProductsTable extends Migration
         });
 
         Schema::table('supplier_products', function (Blueprint $table) {
-            $table->foreign('supply_id')->references('id')->on('suppliers');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('supply_id')->references('id')->on('suppliers')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
