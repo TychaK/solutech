@@ -23,6 +23,10 @@ Once sample data has been created, its time to install all npm dependencies. Go 
 - npm install
 - npm run dev 
 
+Since we will be using Passport to issue tokens, you need to get your Personal Access Token.
+To achieve this run the command
+- php artisan passport:client --personal
+
 Now run the command below to start the application:
 - php artisan serve
 
@@ -32,18 +36,5 @@ or if registered, go to http://localhost:8000/login
 
 - After you create an account or login, you'll be able to copy your Bearer Authorization Key which you can use to interact with the API.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
+##Thanks
+Thank you for checking out this API. :-)
