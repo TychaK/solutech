@@ -36,6 +36,10 @@ or if registered, go to http://localhost:8000/login
 
 - After you create an account or login, you'll be able to copy your Bearer Authorization Key which you can use to interact with the API.
 
+You may use postman to test the endpoints. Please note that we are using Bearer Authorization as shown in the screenshot below:
+![Alt text](/public/img/screenshots/postman_1.png?raw=true "Get Orders Postman")
+![Alt text](/public/img/screenshots/postman_2.png?raw=true "Json Result Postman")
+
 ## Screenshots
 
 ![Alt text](/public/img/screenshots/2.png?raw=true "Register")
