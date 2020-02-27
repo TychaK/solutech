@@ -36,12 +36,16 @@ or if registered, go to http://localhost:8000/login
 
 - After you create an account or login, you'll be able to copy your Bearer Authorization Key which you can use to interact with the API.
 
-##Screenshots
+## Screenshots
 
-![Alt text](/public/img/logo.jpeg?raw=true "Login")
+![Alt text](/public/img/screenshots/2.png?raw=true "Register")
+![Alt text](/public/img/screenshots/3.png?raw=true "Login")
+![Alt text](/public/img/screenshots/4.png?raw=true "Get Orders")
+![Alt text](/public/img/screenshots/5.png?raw=true "Create Order")
+![Alt text](/public/img/screenshots/7.png?raw=true "Create Order Response")
+![Alt text](/public/img/screenshots/8.png?raw=true "Update Order")
+![Alt text](/public/img/screenshots/16.png?raw=true "Remove Product Response")
 
-
-
-##Thanks
+## Thanks
 
 Thank you for checking out this API. :-)
