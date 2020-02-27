@@ -19,8 +19,9 @@ class AuthController extends Controller
         ]);
         $validated['password'] = bcrypt($request->get('password'));
         $user = User::create($validated);
-        $accessToken = $user->createToken('authenticationToken')->accessToken;
-        return view('dashboard')->with(compact('accessToken'));
+        $accessToken = $user->createToken('authToken')->accessToken;
+        \Session::put('accessToken', $accessToken);
+        return redirect('/dashboard/orders');
     }
 
     public function login(Request $request)
@@ -39,7 +40,7 @@ class AuthController extends Controller
             return response()->json(['Invalid Login credentials'], 200);
         }
         // user successfully authenticated... generate the token for that user...
-        $accessToken = auth()->user()->createToken('authenticationToken')->accessToken;
+        $accessToken = auth()->user()->createToken('authToken')->accessToken;
         \Session::put('accessToken', $accessToken);
         return redirect('/dashboard/orders');
     }

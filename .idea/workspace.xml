@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0b9f42d-8abc-45f7-9bff-9dc860fa8f46" name="Default Changelist" comment="Latest Commit">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/CreateOrderDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/CreateProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplierProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/DeleteSupplier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/OrderDetailDashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/ProductDashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveOrderDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/RemoveSupplierProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/SupplierDashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/SupplierProductDashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateOrderDetail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateProduct.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/api/UpdateSupplierProduct.vue" afterDir="false" />
+    <list default="true" id="a0b9f42d-8abc-45f7-9bff-9dc860fa8f46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -187,7 +171,7 @@
       <workItem from="1582726102393" duration="11188000" />
       <workItem from="1582739585523" duration="5707000" />
       <workItem from="1582746993585" duration="15291000" />
-      <workItem from="1582796690558" duration="21972000" />
+      <workItem from="1582796690558" duration="23023000" />
     </task>
     <task id="LOCAL-00001" summary="Added Project Authentication controller">
       <created>1582806032873</created>
@@ -266,7 +250,28 @@
       <option name="project" value="LOCAL" />
       <updated>1582818973094</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added New Vue Components for API Calls">
+      <created>1582819006568</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819006568</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Modified api.php routes to accept only one parameter for productdetails and supplierproducts">
+      <created>1582819059528</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819059528</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated registered Vue Components">
+      <created>1582819093112</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582819093112</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,28 +292,31 @@
     <MESSAGE value="Modify Controllers &amp; Fix Issue with findOrFail -&gt; Changed to firstOrFail" />
     <MESSAGE value="Registered New Vue Components" />
     <MESSAGE value="New Blade Files for the API Dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Blade Files for the API Dashboard" />
+    <MESSAGE value="Added New Vue Components for API Calls" />
+    <MESSAGE value="Modified api.php routes to accept only one parameter for productdetails and supplierproducts" />
+    <MESSAGE value="Updated registered Vue Components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated registered Vue Components" />
   </component>
   <component name="WindowStateProjectService">
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582752609644">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1582752609644" />
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582819059397">
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582819092963">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582819059397" />
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582819092963" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1582747055639">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1582747055639" />
-    <state x="382" y="174" key="run.anything.popup" timestamp="1582742786226">
+    <state x="382" y="174" key="run.anything.popup" timestamp="1582820178194">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1582742786226" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582818431019">
+    <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1582820178194" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582820055794">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582818431019" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582820055794" />
   </component>
 </project>

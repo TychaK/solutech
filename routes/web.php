@@ -22,9 +22,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('register', function () {
         return view('register');
     });
-    Route::post('register', 'AuthController@register');
-    Route::post('login', 'AuthController@login');
+
 });
+Route::post('register', 'AuthController@register');
+Route::post('login', 'AuthController@login');
 
 Route::get('/dashboard/orders', function () {
     return view('admin.dashboard');

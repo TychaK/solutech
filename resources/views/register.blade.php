@@ -50,7 +50,7 @@
         @endif
     </div>
     <div class="col-md-12 text-center">
-        {!! Form::open(['url'=>'api/register','method'=>'POST','class'=>'form-signin']) !!}
+        {!! Form::open(['url'=>'/register','method'=>'POST','class'=>'form-signin']) !!}
         <img class="mb-4" src="{{asset('img/logo.jpeg')}}" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign Up</h1>
         <label for="inputEmail" class="sr-only">Email address</label>
