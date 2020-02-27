@@ -40,7 +40,7 @@ You may use postman to test the endpoints. Please note that we are using Bearer 
 ![Alt text](/public/img/screenshots/postman_1.png?raw=true "Get Orders Postman")
 ![Alt text](/public/img/screenshots/postman_2.png?raw=true "Json Result Postman")
 
-## Screenshots
+## Frontend Screenshots
 
 ![Alt text](/public/img/screenshots/2.png?raw=true "Register")
 ![Alt text](/public/img/screenshots/3.png?raw=true "Login")
