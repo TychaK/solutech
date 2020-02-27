@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b9f42d-8abc-45f7-9bff-9dc860fa8f46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/OrderTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create-suppliers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create-suppliers.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/remove-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/remove-products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/update-products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/update-products.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
@@ -155,9 +159,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components/api" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -166,11 +172,30 @@
       <recent name="$PROJECT_DIR$/public/img" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.OrderTest.testPostOrder (1)">
+    <configuration name="OrderTest.testExample" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\OrderTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/OrderTest.php" method="testExample" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderTest.testPostOrder (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\OrderTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/OrderTest.php" method="testPostOrder" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderTest.testPostOrder" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\OrderTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/OrderTest.php" method="testPostOrder" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.OrderTest.testPostOrder (1)" />
+        <item itemvalue="PHPUnit.OrderTest.testExample" />
+        <item itemvalue="PHPUnit.OrderTest.testPostOrder" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,7 +211,7 @@
       <workItem from="1582726102393" duration="11188000" />
       <workItem from="1582739585523" duration="5707000" />
       <workItem from="1582746993585" duration="15291000" />
-      <workItem from="1582796690558" duration="29294000" />
+      <workItem from="1582796690558" duration="36405000" />
     </task>
     <task id="LOCAL-00001" summary="Added Project Authentication controller">
       <created>1582806032873</created>
@@ -342,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582830899320</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed blade issues with nav link dropdowns">
+      <created>1582833589211</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1582833589211</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,28 +406,65 @@
     <MESSAGE value="Changed Vue props from access-token to token for uniformity" />
     <MESSAGE value="Added token props in SupplierProductDashboard.vue" />
     <MESSAGE value="Fixed bugs passing access token to Vue from Laravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs passing access token to Vue from Laravel" />
+    <MESSAGE value="Fixed blade issues with nav link dropdowns" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed blade issues with nav link dropdowns" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="297" y="55" width="824" height="691" key="#CLI_Interpreters" timestamp="1582835256330">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="297" y="55" width="824" height="691" key="#CLI_Interpreters/70.27.1296.741@70.27.1296.741" timestamp="1582835256330" />
+    <state x="344" y="27" width="751" height="741" key="#OrderTest.testPostOrder" timestamp="1582835277394">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="344" y="27" width="751" height="741" key="#OrderTest.testPostOrder/70.27.1296.741@70.27.1296.741" timestamp="1582835277394" />
+    <state x="364" y="27" width="700" height="741" key="#PHP" timestamp="1582835275755">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="364" y="27" width="700" height="741" key="#PHP/70.27.1296.741@70.27.1296.741" timestamp="1582835275755" />
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582752609644">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1582752609644" />
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582830898994">
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1582833588267">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582830898994" />
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1582833588267" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1582747055639">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1582747055639" />
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1582840681515">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1582840681515" />
+    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1582840681513">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1582840681513" />
+    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1582840681512">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1582840681512" />
+    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1582840681514">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1582840681514" />
+    <state x="207" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582840091994">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="207" y="31" width="1022" height="737" key="SettingsEditor/70.27.1296.741@70.27.1296.741" timestamp="1582840091994" />
+    <state x="313" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1582839985789">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="313" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1296.741@70.27.1296.741" timestamp="1582839985789" />
     <state x="382" y="174" key="run.anything.popup" timestamp="1582820178194">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1582820178194" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582830191892">
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582835095503">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582830191892" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1582835095503" />
   </component>
 </project>
