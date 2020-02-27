@@ -28,14 +28,14 @@ class OrderController extends Controller
 
     public function update(Request $request, $id)
     {
-        $order = Order::findOrFail()->where('order_number', $id);
+        $order = Order::firstOrFail()->where('id', $id);
         $order->update($request->all());
         return response()->json($order, 200);
     }
 
     public function delete($id)
     {
-        $order = Order::findOrFail()->where('order_number', $id);
+        $order = Order::firstOrFail()->where('id', $id);
         $order->delete();
         return response()->json($order, 204);
     }

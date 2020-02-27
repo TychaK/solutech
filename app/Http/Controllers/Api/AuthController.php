@@ -31,6 +31,10 @@ class AuthController extends Controller
 
         if (!auth()->attempt($validated)) {
             // wrong credentials...
+            if ($request->get('_token')) {
+                // on site authentication...
+                return back()->withErrors("Invalid Login credentials");
+            }
             return response()->json(['Invalid Login credentials'], 200);
         }
         // user successfully authenticated... generate the token for that user...
