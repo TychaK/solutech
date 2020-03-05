@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/details/{id}', 'OrderController@getOrderDetailsRelationship');
 Route::get('/', function () {
     return view('home');
 });

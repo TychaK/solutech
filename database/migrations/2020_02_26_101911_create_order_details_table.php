@@ -20,8 +20,8 @@ class CreateOrderDetailsTable extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('deleted_at')->useCurrent();
-
         });
+
         Schema::table('order_details', function (Blueprint $table) {
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
