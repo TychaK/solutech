@@ -29,7 +29,10 @@
     </div>
 </template>
 <script>
+    import runPost from '../mixings/Create.js';
+
     export default {
+        mixins: [runPost],
         props: ['token'],
         data: function () {
             return {
@@ -40,34 +43,19 @@
             }
         },
         methods: {
-            createOrder: function (e) {
+            createOrder: async function (e) {
                 e.preventDefault();
                 if (this.name == null) {
                     return alert("Please enter product name");
                 }
+                let productData = {
+                    'name': this.name,
+                    'description': this.description,
+                    'quantity': this.quantity
+                };
 
+                this.post_response = await this.runPost("http://localhost:8000/api/products", productData);
                 // order number present, do api call using axios :-)
-                axios.post(
-                    "http://localhost:8000/api/products",
-                    {
-                        'name': this.name,
-                        'description': this.description,
-                        'quantity': this.quantity
-                    },
-                    {
-                        headers: {
-                            "Accept": "application/json",
-                            "Authorization": `Bearer ` + this.token
-                        }
-                    }
-                )
-                    .then(response => {
-                        this.post_response = JSON.stringify(response, null, 2);
-                    })
-                    .catch(err => {
-                        alert("Something is wrong. Please check the response below");
-                        this.post_response = JSON.stringify(response, null, 2);
-                    });
             }
         },
         mounted() {

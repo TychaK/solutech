@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b9f42d-8abc-45f7-9bff-9dc860fa8f46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/mixings/Headers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/mixings/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/mixings/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateProduct.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateSupplier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplier.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/api/CreateSupplierProduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/api/CreateSupplierProduct.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +220,7 @@
       <workItem from="1583145075659" duration="58000" />
       <workItem from="1583337357167" duration="723000" />
       <workItem from="1583393844823" duration="2751000" />
-      <workItem from="1583401609897" duration="20775000" />
+      <workItem from="1583401609897" duration="21690000" />
     </task>
     <task id="LOCAL-00001" summary="Added Project Authentication controller">
       <created>1582806032873</created>
@@ -473,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583420605470</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added Headers Mixins to Vue Components.">
+      <created>1583422754611</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1583422754611</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Registered New Vue Components" />
     <MESSAGE value="New Blade Files for the API Dashboard" />
     <MESSAGE value="Added New Vue Components for API Calls" />
     <MESSAGE value="Modified api.php routes to accept only one parameter for productdetails and supplierproducts" />
@@ -506,7 +513,8 @@
     <MESSAGE value="Modified Models Order.php &amp; Supplier.php with Laravel Relationships.(hasMany)" />
     <MESSAGE value="Authentication to the API" />
     <MESSAGE value="Added Mixins to the API to make Vue Code Reusable." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Mixins to the API to make Vue Code Reusable." />
+    <MESSAGE value="Added Headers Mixins to Vue Components." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Headers Mixins to Vue Components." />
   </component>
   <component name="WindowStateProjectService">
     <state x="297" y="55" width="824" height="691" key="#CLI_Interpreters" timestamp="1582835256330">
@@ -525,10 +533,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1582752609644" />
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1583420605097">
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2" timestamp="1583422754338">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1583420605097" />
+    <state x="258" y="27" width="910" height="741" key="CommitChangelistDialog2/70.27.1296.741@70.27.1296.741" timestamp="1583422754338" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583145141299">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
@@ -561,10 +569,10 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1582820178194" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1583422229528">
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1583423288850">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741/70.27.1296.741@70.27.1296.741" timestamp="1583396072713" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1583422229528" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1583423288850" />
   </component>
 </project>

@@ -2010,7 +2010,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 6:
                 response = _context.sent;
-                this.post_response = response.data;
+                this.post_response = response;
 
               case 8:
               case "end":
@@ -2041,6 +2041,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixings/Create.js */ "./resources/js/components/mixings/Create.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2067,7 +2076,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
   props: ['token'],
   data: function data() {
     return {
@@ -2077,35 +2088,58 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    createOrder: function createOrder(e) {
-      var _this = this;
+    createOrder: function () {
+      var _createOrder = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var orderDetailData;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
 
-      e.preventDefault();
+                if (!(this.order_id == null)) {
+                  _context.next = 3;
+                  break;
+                }
 
-      if (this.order_id == null) {
-        return alert("Please enter Order Id");
+                return _context.abrupt("return", alert("Please enter Order Id"));
+
+              case 3:
+                if (!(this.product_id == null)) {
+                  _context.next = 5;
+                  break;
+                }
+
+                return _context.abrupt("return", alert("Please enter product Id"));
+
+              case 5:
+                orderDetailData = {
+                  'order_id': this.order_id,
+                  'product_id': this.product_id
+                }; // order number present, do api call using axios :-)
+
+                _context.next = 8;
+                return this.runPost("http://localhost:8000/api/order_details", orderDetailData);
+
+              case 8:
+                this.post_response = _context.sent;
+
+              case 9:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function createOrder(_x) {
+        return _createOrder.apply(this, arguments);
       }
 
-      if (this.product_id == null) {
-        return alert("Please enter product Id");
-      } // order number present, do api call using axios :-)
-
-
-      axios.post("http://localhost:8000/api/order_details", {
-        'order_id': this.order_id,
-        'product_id': this.product_id
-      }, {
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + this.token
-        }
-      }).then(function (response) {
-        _this.post_response = JSON.stringify(response, null, 2);
-      })["catch"](function (err) {
-        alert("Something is wrong. Please check the response below");
-        _this.post_response = JSON.stringify(response, null, 2);
-      });
-    }
+      return createOrder;
+    }()
   },
   mounted: function mounted() {}
 });
@@ -2121,6 +2155,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixings/Create.js */ "./resources/js/components/mixings/Create.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2151,7 +2194,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
   props: ['token'],
   data: function data() {
     return {
@@ -2162,32 +2207,50 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    createOrder: function createOrder(e) {
-      var _this = this;
+    createOrder: function () {
+      var _createOrder = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var productData;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
 
-      e.preventDefault();
+                if (!(this.name == null)) {
+                  _context.next = 3;
+                  break;
+                }
 
-      if (this.name == null) {
-        return alert("Please enter product name");
-      } // order number present, do api call using axios :-)
+                return _context.abrupt("return", alert("Please enter product name"));
 
+              case 3:
+                productData = {
+                  'name': this.name,
+                  'description': this.description,
+                  'quantity': this.quantity
+                };
+                _context.next = 6;
+                return this.runPost("http://localhost:8000/api/products", productData);
 
-      axios.post("http://localhost:8000/api/products", {
-        'name': this.name,
-        'description': this.description,
-        'quantity': this.quantity
-      }, {
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + this.token
-        }
-      }).then(function (response) {
-        _this.post_response = JSON.stringify(response, null, 2);
-      })["catch"](function (err) {
-        alert("Something is wrong. Please check the response below");
-        _this.post_response = JSON.stringify(response, null, 2);
-      });
-    }
+              case 6:
+                this.post_response = _context.sent;
+
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function createOrder(_x) {
+        return _createOrder.apply(this, arguments);
+      }
+
+      return createOrder;
+    }()
   },
   mounted: function mounted() {}
 });
@@ -2203,6 +2266,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixings/Create.js */ "./resources/js/components/mixings/Create.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2225,7 +2297,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
   props: ['token'],
   data: function data() {
     return {
@@ -2234,30 +2308,49 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    createOrder: function createOrder(e) {
-      var _this = this;
+    createOrder: function () {
+      var _createOrder = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var supplierData;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
 
-      e.preventDefault();
+                if (!(this.name == null)) {
+                  _context.next = 3;
+                  break;
+                }
 
-      if (this.name == null) {
-        return alert("Please enter product name");
-      } // order number present, do api call using axios :-)
+                return _context.abrupt("return", alert("Please enter product name"));
 
+              case 3:
+                supplierData = {
+                  'name': this.name
+                }; // order number present, do api call using axios :-)
 
-      axios.post("http://localhost:8000/api/suppliers", {
-        'name': this.name
-      }, {
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + this.token
-        }
-      }).then(function (response) {
-        _this.post_response = JSON.stringify(response, null, 2);
-      })["catch"](function (err) {
-        alert("Something is wrong. Please check the response below");
-        _this.post_response = JSON.stringify(response, null, 2);
-      });
-    }
+                _context.next = 6;
+                return this.runPost("http://localhost:8000/api/suppliers", supplierData);
+
+              case 6:
+                this.post_response = _context.sent;
+
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function createOrder(_x) {
+        return _createOrder.apply(this, arguments);
+      }
+
+      return createOrder;
+    }()
   },
   mounted: function mounted() {}
 });
@@ -2273,6 +2366,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixings/Create.js */ "./resources/js/components/mixings/Create.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2299,7 +2401,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
   props: ['token'],
   data: function data() {
     return {
@@ -2309,35 +2413,59 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    createOrder: function createOrder(e) {
-      var _this = this;
+    createOrder: function () {
+      var _createOrder = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var supplierProductData, response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
 
-      e.preventDefault();
+                if (!(this.supply_id == null)) {
+                  _context.next = 3;
+                  break;
+                }
 
-      if (this.supply_id == null) {
-        return alert("Please enter Supply Id");
+                return _context.abrupt("return", alert("Please enter Supply Id"));
+
+              case 3:
+                if (!(this.product_id == null)) {
+                  _context.next = 5;
+                  break;
+                }
+
+                return _context.abrupt("return", alert("Please enter product Id"));
+
+              case 5:
+                // order number present, do api call using axios :-)
+                supplierProductData = {
+                  'supply_id': this.supply_id,
+                  'product_id': this.product_id
+                };
+                _context.next = 8;
+                return this.runPost("http://localhost:8000/api/supplier_products", supplierProductData);
+
+              case 8:
+                response = _context.sent;
+                this.post_response = response;
+
+              case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function createOrder(_x) {
+        return _createOrder.apply(this, arguments);
       }
 
-      if (this.product_id == null) {
-        return alert("Please enter product Id");
-      } // order number present, do api call using axios :-)
-
-
-      axios.post("http://localhost:8000/api/supplier_products", {
-        'supply_id': this.supply_id,
-        'product_id': this.product_id
-      }, {
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + this.token
-        }
-      }).then(function (response) {
-        _this.post_response = JSON.stringify(response, null, 2);
-      })["catch"](function (err) {
-        alert("Something is wrong. Please check the response below");
-        _this.post_response = JSON.stringify(response, null, 2);
-      });
-    }
+      return createOrder;
+    }()
   },
   mounted: function mounted() {}
 });

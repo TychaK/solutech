@@ -42,7 +42,7 @@
                     'order_number': this.order_number
                 };
                 const response = await this.runPost("http://localhost:8000/api/orders", orderData);
-                this.post_response = response.data;
+                this.post_response = response;
             },
 
         },
