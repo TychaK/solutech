@@ -10,12 +10,12 @@ class SupplierController extends Controller
     //
     public function index()
     {
-        return Supplier::all();
+        return Supplier::with('supplierProduct')->get();
     }
 
     public function show($id)
     {
-        $Supplier = Supplier::where('id', '=', $id)->get();
+        $Supplier = Supplier::where('id', '=', $id)->with('supplierProduct')->get();
         return $Supplier;
     }
 

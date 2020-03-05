@@ -9,14 +9,19 @@ class OrderController extends Controller
 {
     //
 
+    public function getOrderDetailsRelationship()
+    {
+        return Order::with('orderDetail')->get();
+    }
+
     public function index()
     {
-        return Order::all();
+        return Order::with('orderDetail')->get();
     }
 
     public function show($id)
     {
-        $order = Order::where('order_number', '=', $id)->get();
+        $order = Order::where('id', '=', $id)->with('orderDetail')->first();
         return $order;
     }
 
@@ -28,7 +33,7 @@ class OrderController extends Controller
 
     public function update(Request $request, $id)
     {
-        $order = Order::firstOrFail()->where('id', $id);
+        $order = Order::firstOrFail()->with('orderDetail')->where('id', $id);
         $order->update($request->all());
         return response()->json($order, 200);
     }
