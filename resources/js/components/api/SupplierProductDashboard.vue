@@ -35,27 +35,24 @@
     </div>
 </template>
 <script>
+    import runAPI from "../mixings/Get.js";
+
     export default {
+        mixins: [runAPI],
         props: ['token'],
         data: function () {
             return {
-                supplier_products: []
+                supplier_products: ''
             }
         },
-        mounted() {
-            axios.get(
-                'http://localhost:8000/api/supplier_products',
-                {
-                    headers: {
-                        "Accept": "application/json",
-                        "Authorization": `Bearer ` + this.token
-                    }
-                }
-            ).then(response => {
+        methods: {
+            async getEndpointData() {
+                const response = await this.runAPI("http://localhost:8000/api/supplier_products");
                 this.supplier_products = response.data;
-            }).catch(err => {
-                console.log(err);
-            });
+            }
+        },
+        beforeMount() {
+            this.getEndpointData();
         }
     }
 </script>
