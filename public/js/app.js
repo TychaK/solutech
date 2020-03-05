@@ -1941,6 +1941,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixings/Create.js */ "./resources/js/components/mixings/Create.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -1963,7 +1972,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixings_Create_js__WEBPACK_IMPORTED_MODULE_1__["default"]],
   props: ['token'],
   data: function data() {
     return {
@@ -1972,30 +1983,49 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    createOrder: function createOrder(e) {
-      var _this = this;
+    ValidateOrder: function () {
+      var _ValidateOrder = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        var orderData, response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
 
-      e.preventDefault();
+                if (!(this.order_number == null)) {
+                  _context.next = 3;
+                  break;
+                }
 
-      if (this.order_number == null) {
-        return alert("Please enter order number");
-      } // order number present, do api call using axios :-)
+                return _context.abrupt("return", alert("Please enter order number"));
 
+              case 3:
+                orderData = {
+                  'order_number': this.order_number
+                };
+                _context.next = 6;
+                return this.runPost("http://localhost:8000/api/orders", orderData);
 
-      axios.post("http://localhost:8000/api/orders", {
-        'order_number': this.order_number
-      }, {
-        headers: {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + this.token
-        }
-      }).then(function (response) {
-        _this.post_response = JSON.stringify(response, null, 2);
-      })["catch"](function (err) {
-        alert("Something is wrong. Please check the response below");
-        _this.post_response = JSON.stringify(response, null, 2);
-      });
-    }
+              case 6:
+                response = _context.sent;
+                this.post_response = response.data;
+
+              case 8:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function ValidateOrder(_x) {
+        return _ValidateOrder.apply(this, arguments);
+      }
+
+      return ValidateOrder;
+    }()
   },
   mounted: function mounted() {}
 });
@@ -23471,7 +23501,7 @@ var render = function() {
         "form",
         {
           attrs: { id: "create-order-form", method: "POST", action: "" },
-          on: { submit: _vm.createOrder }
+          on: { submit: _vm.ValidateOrder }
         },
         [
           _c("label", [_vm._v("Access Token")]),
@@ -43749,6 +43779,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/mixings/Create.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/mixings/Create.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Headers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Headers */ "./resources/js/components/mixings/Headers.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_Headers__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  methods: {
+    runPost: function runPost(endpoint, data) {
+      return axios.post(endpoint, data, this.getHeaders());
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/components/mixings/Get.js":
 /*!************************************************!*\
   !*** ./resources/js/components/mixings/Get.js ***!
@@ -43758,15 +43810,37 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Headers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Headers */ "./resources/js/components/mixings/Headers.js");
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_Headers__WEBPACK_IMPORTED_MODULE_0__["default"]],
   methods: {
     runAPI: function runAPI(endpoint) {
-      return axios.get(endpoint, {
+      return axios.get(endpoint, this.getHeaders());
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/mixings/Headers.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/mixings/Headers.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    getHeaders: function getHeaders() {
+      return {
         headers: {
           "Accept": "application/json",
           "Authorization": "Bearer " + this.token
         }
-      });
+      };
     }
   }
 });

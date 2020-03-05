@@ -1,14 +1,12 @@
+import getHeaders from "./Headers";
+
 export default {
+    mixins: [getHeaders],
     methods: {
         runAPI: function (endpoint) {
             return axios.get(
                 endpoint,
-                {
-                    headers: {
-                        "Accept": "application/json",
-                        "Authorization": `Bearer ` + this.token
-                    }
-                }
+                this.getHeaders()
             );
         }
     }
