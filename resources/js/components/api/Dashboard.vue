@@ -29,27 +29,27 @@
     </div>
 </template>
 <script>
+
+    import runAPI from "../mixings/Get.js";
+
     export default {
+        mixins: [runAPI],
         props: ['token'],
         data: function () {
             return {
-                orders: []
+                orders: ''
             }
         },
-        mounted() {
-            axios.get(
-                'http://localhost:8000/api/orders',
-                {
-                    headers: {
-                        "Accept": "application/json",
-                        "Authorization": `Bearer ` + this.token
-                    }
-                }
-            ).then(response => {
+        methods: {
+            async getEndpointData() {
+                const response = await this.runAPI("http://localhost:8000/api/orders");
                 this.orders = response.data;
-            }).catch(err => {
-                console.log(err);
-            });
+            }
+        },
+        beforeMount() {
+            this.getEndpointData();
         }
     }
+
+
 </script>
